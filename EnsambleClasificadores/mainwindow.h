@@ -15,7 +15,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_pb_abrirArchivo_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QString rutaArchivo;
+    int elementos;
+    int atributos;
+    int clases;
 };
 #endif // MAINWINDOW_H

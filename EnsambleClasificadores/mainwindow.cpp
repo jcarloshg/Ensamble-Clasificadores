@@ -40,8 +40,6 @@ void MainWindow::on_pb_abrirArchivo_clicked()
     leer >> aux;
     clases = aux.toInt();
 
-    qDebug() << elementos << atributos << clases;
-
     int row = 1;
     while (!leer.atEnd()) {
         QString plok;
@@ -50,4 +48,11 @@ void MainWindow::on_pb_abrirArchivo_clicked()
         qDebug() << "row " << row << "\n" << lista;
         row++;
     }
+
+    actualizarDatos();
+}
+
+void MainWindow::actualizarDatos()
+{
+    ui->lb_numCol->setText(QString::number(atributos));
 }

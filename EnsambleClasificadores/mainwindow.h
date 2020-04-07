@@ -17,6 +17,7 @@ public:
 
 private slots:
     void on_pb_abrirArchivo_clicked();
+    void actualizarDatos();
 
 private:
     Ui::MainWindow *ui;
